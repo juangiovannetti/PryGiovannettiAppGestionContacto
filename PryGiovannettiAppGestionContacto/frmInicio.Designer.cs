@@ -36,34 +36,32 @@
             lstResultado = new ListBox();
             mtbContacto = new TextBox();
             lblCantidad = new Label();
-            dtpFecha = new DateTimePicker();
             lblFecha = new Label();
-            label1 = new Label();
-            btnMostar = new Button();
-            btnLimpiar = new Button();
             lblCantidadContactos = new Label();
             lblCantidadContacto = new Label();
+            btnVerContactos = new Button();
+            mtbFecha = new MaskedTextBox();
             SuspendLayout();
             // 
             // lblContacto
             // 
             lblContacto.AutoSize = true;
-            lblContacto.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblContacto.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblContacto.ForeColor = SystemColors.ActiveCaptionText;
             lblContacto.Location = new Point(33, 33);
             lblContacto.Name = "lblContacto";
-            lblContacto.Size = new Size(72, 21);
+            lblContacto.Size = new Size(60, 17);
             lblContacto.TabIndex = 0;
             lblContacto.Text = "Contacto";
             // 
             // lblNumero
             // 
             lblNumero.AutoSize = true;
-            lblNumero.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblNumero.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblNumero.ForeColor = SystemColors.ActiveCaptionText;
             lblNumero.Location = new Point(37, 91);
             lblNumero.Name = "lblNumero";
-            lblNumero.Size = new Size(68, 21);
+            lblNumero.Size = new Size(56, 17);
             lblNumero.TabIndex = 1;
             lblNumero.Text = "Número";
             // 
@@ -71,7 +69,7 @@
             // 
             btnAgendar.BackColor = SystemColors.ActiveCaption;
             btnAgendar.Enabled = false;
-            btnAgendar.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnAgendar.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnAgendar.ForeColor = SystemColors.InfoText;
             btnAgendar.Location = new Point(184, 131);
             btnAgendar.Name = "btnAgendar";
@@ -84,7 +82,7 @@
             // btnCancelar
             // 
             btnCancelar.BackColor = SystemColors.ActiveCaption;
-            btnCancelar.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnCancelar.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnCancelar.ForeColor = SystemColors.ControlText;
             btnCancelar.Location = new Point(98, 131);
             btnCancelar.Name = "btnCancelar";
@@ -115,67 +113,34 @@
             // 
             // mtbContacto
             // 
+            mtbContacto.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             mtbContacto.Location = new Point(135, 36);
             mtbContacto.Name = "mtbContacto";
-            mtbContacto.Size = new Size(135, 22);
+            mtbContacto.Size = new Size(135, 25);
             mtbContacto.TabIndex = 9;
             mtbContacto.TextChanged += txtContacto_TextChanged;
             // 
             // lblCantidad
             // 
             lblCantidad.AutoSize = true;
+            lblCantidad.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblCantidad.ForeColor = SystemColors.ActiveCaptionText;
             lblCantidad.Location = new Point(29, 296);
             lblCantidad.Name = "lblCantidad";
-            lblCantidad.Size = new Size(54, 13);
+            lblCantidad.Size = new Size(60, 17);
             lblCantidad.TabIndex = 10;
             lblCantidad.Text = "Cantidad";
-            // 
-            // dtpFecha
-            // 
-            dtpFecha.Enabled = false;
-            dtpFecha.Format = DateTimePickerFormat.Short;
-            dtpFecha.Location = new Point(99, 334);
-            dtpFecha.Name = "dtpFecha";
-            dtpFecha.Size = new Size(100, 22);
-            dtpFecha.TabIndex = 11;
             // 
             // lblFecha
             // 
             lblFecha.AutoSize = true;
+            lblFecha.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblFecha.ForeColor = SystemColors.ActiveCaptionText;
-            lblFecha.Location = new Point(29, 341);
+            lblFecha.Location = new Point(29, 337);
             lblFecha.Name = "lblFecha";
-            lblFecha.Size = new Size(37, 13);
+            lblFecha.Size = new Size(41, 17);
             lblFecha.TabIndex = 13;
             lblFecha.Text = "Fecha";
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Location = new Point(342, 360);
-            label1.Name = "label1";
-            label1.Size = new Size(38, 13);
-            label1.TabIndex = 14;
-            label1.Text = "label1";
-            // 
-            // btnMostar
-            // 
-            btnMostar.Location = new Point(94, 391);
-            btnMostar.Name = "btnMostar";
-            btnMostar.Size = new Size(70, 26);
-            btnMostar.TabIndex = 16;
-            btnMostar.Text = "Mostar";
-            btnMostar.UseVisualStyleBackColor = true;
-            // 
-            // btnLimpiar
-            // 
-            btnLimpiar.Location = new Point(198, 391);
-            btnLimpiar.Name = "btnLimpiar";
-            btnLimpiar.Size = new Size(68, 26);
-            btnLimpiar.TabIndex = 17;
-            btnLimpiar.Text = "Limpiar";
-            btnLimpiar.UseVisualStyleBackColor = true;
             // 
             // lblCantidadContactos
             // 
@@ -196,19 +161,38 @@
             lblCantidadContacto.TabIndex = 19;
             lblCantidadContacto.Text = "---";
             // 
+            // btnVerContactos
+            // 
+            btnVerContactos.BackColor = SystemColors.ActiveCaption;
+            btnVerContactos.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnVerContactos.ForeColor = SystemColors.ActiveCaptionText;
+            btnVerContactos.Location = new Point(184, 376);
+            btnVerContactos.Name = "btnVerContactos";
+            btnVerContactos.Size = new Size(119, 29);
+            btnVerContactos.TabIndex = 20;
+            btnVerContactos.Text = "Ver Contacto";
+            btnVerContactos.UseVisualStyleBackColor = false;
+            // 
+            // mtbFecha
+            // 
+            mtbFecha.Location = new Point(98, 332);
+            mtbFecha.Mask = "00/00/0000 00:00";
+            mtbFecha.Name = "mtbFecha";
+            mtbFecha.Size = new Size(100, 22);
+            mtbFecha.TabIndex = 21;
+            mtbFecha.ValidatingType = typeof(DateTime);
+            // 
             // frmInicio
             // 
             AutoScaleDimensions = new SizeF(6F, 13F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ControlLightLight;
-            ClientSize = new Size(346, 439);
+            ClientSize = new Size(331, 426);
+            Controls.Add(mtbFecha);
+            Controls.Add(btnVerContactos);
             Controls.Add(lblCantidadContacto);
             Controls.Add(lblCantidadContactos);
-            Controls.Add(btnLimpiar);
-            Controls.Add(btnMostar);
-            Controls.Add(label1);
             Controls.Add(lblFecha);
-            Controls.Add(dtpFecha);
             Controls.Add(lblCantidad);
             Controls.Add(mtbContacto);
             Controls.Add(lstResultado);
@@ -236,13 +220,11 @@
         private ListBox lstResultado;
         //private TextBox txtContacto;
         private Label lblCantidad;
-        private DateTimePicker dtpFecha;
         private Label lblFecha;
-        private Label label1;
         private TextBox mtbContacto;
-        private Button btnMostar;
-        private Button btnLimpiar;
         private Label lblCantidadContactos;
         private Label lblCantidadContacto;
+        private Button btnVerContactos;
+        private MaskedTextBox mtbFecha;
     }
 }
