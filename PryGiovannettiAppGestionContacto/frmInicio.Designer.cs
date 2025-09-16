@@ -100,6 +100,7 @@
             mtbNumero.Name = "mtbNumero";
             mtbNumero.Size = new Size(100, 22);
             mtbNumero.TabIndex = 7;
+            mtbNumero.MaskInputRejected += mtbNumero_MaskInputRejected;
             mtbNumero.TextChanged += mtbNumero_TextChanged;
             // 
             // lstResultado
@@ -172,6 +173,7 @@
             btnVerContactos.TabIndex = 20;
             btnVerContactos.Text = "Ver Contacto";
             btnVerContactos.UseVisualStyleBackColor = false;
+            btnVerContactos.Click += btnVerContactos_Click;
             // 
             // mtbFecha
             // 

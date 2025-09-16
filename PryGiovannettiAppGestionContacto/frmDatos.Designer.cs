@@ -43,7 +43,7 @@
             btnAtras.Name = "btnAtras";
             btnAtras.Size = new Size(133, 50);
             btnAtras.TabIndex = 0;
-            btnAtras.Text = "Atras";
+            btnAtras.Text = "Anterior";
             btnAtras.UseVisualStyleBackColor = false;
             btnAtras.Click += btnAtras_Click;
             // 

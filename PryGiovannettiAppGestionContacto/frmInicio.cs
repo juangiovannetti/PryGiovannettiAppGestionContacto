@@ -80,6 +80,25 @@ namespace PryGiovannettiAppGestionContacto
         {
 
         }
+
+        private void mtbNumero_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+            if (mtbNumero.Text == "")
+            {
+                btnAgendar.Enabled = false;
+            }
+            else
+            {
+                btnAgendar.Enabled = true;
+            }
+        }
+
+        private void btnVerContactos_Click(object sender, EventArgs e)
+        {
+            frmInicio ventanaVercontacto = new frmInicio();
+            ventanaVercontacto.btnVerContactos = btnVerContactos;
+            ventanaVercontacto.ShowDialog();
+        }
     }
 }
-              
+             

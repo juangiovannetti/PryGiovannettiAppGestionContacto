@@ -28,7 +28,7 @@ namespace PryGiovannettiAppGestionContacto
 
             lblDatos.Text = vecNombre[0];
 
-            
+
         }
 
         private void btnSiguiente_Click(object sender, EventArgs e)
@@ -36,7 +36,7 @@ namespace PryGiovannettiAppGestionContacto
             indice++; // indice = indice + 1
             lblDatos.Text = vecNombre[indice];
 
-            if (vecNombre.Length <= (indice + 1));
+            if (vecNombre.Length <= (indice + 1))
             {
                 btnSiguiente.Enabled = false;
             }
@@ -44,10 +44,14 @@ namespace PryGiovannettiAppGestionContacto
 
         private void btnAtras_Click(object sender, EventArgs e)
         {
+            //muestra el valor anterior en la posicion actual del array
             indice--;
             lblDatos.Text = vecNombre[indice];
 
-            if (vecNombre.Length <= (indice - 1));
+            //validacion si estamos en posicion 0, se deshabilita el btnAtras
+
+
+            if (vecNombre.Length <= (indice - 1))
             {
                 btnAtras.Enabled = false;
             }
