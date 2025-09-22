@@ -16,7 +16,7 @@ namespace PryGiovannettiAppGestionContacto
         int indice = 0;
 
         //vector
-        string[] vecNumero = new string[5];
+        string[] vecContacto = new string[5];
         string[] vecTelefono = new string[5];
 
         private void btnAgendar_Click(object sender, EventArgs e)
@@ -27,7 +27,7 @@ namespace PryGiovannettiAppGestionContacto
             lstResultado.Items.Add("contacto: " + vContacto + "Numero:" + vNumero);
 
             //grabo en el vector con el indice
-            vecNumero[indice] = mtbContacto.Text;
+            vecContacto[indice] = mtbContacto.Text;
             vecTelefono[indice] = mtbNumero.Text;
 
             //Limpiar controles
@@ -95,8 +95,8 @@ namespace PryGiovannettiAppGestionContacto
 
         private void btnVerContactos_Click(object sender, EventArgs e)
         {
-            frmInicio ventanaVercontacto = new frmInicio();
-            ventanaVercontacto.btnVerContactos = btnVerContactos;
+            frmVerContacto ventanaVercontacto = new frmVerContacto();
+            ventanaVercontacto.vecContacto = vecContacto;
             ventanaVercontacto.ShowDialog();
         }
     }

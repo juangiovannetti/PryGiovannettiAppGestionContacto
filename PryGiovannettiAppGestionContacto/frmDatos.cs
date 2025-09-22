@@ -17,43 +17,63 @@ namespace PryGiovannettiAppGestionContacto
             InitializeComponent();
         }
         // Declaracion de variables 
-        string[] vecNombre = new string[5];
+        public string[] vecContacto = new string[5];
         int indice = 0;
+
+        //variable auxiliar para concatenar y mostrar al array
+        string resultado = "";
+
         private void frmVerContacto_Load(object sender, EventArgs e)
         {
-            vecNombre[0] = "Juan";
-            vecNombre[1] = "Pedro";
-            vecNombre[3] = "carlos";
-            vecNombre[4] = "tiziana";
+            
 
-            lblDatos.Text = vecNombre[0];
+            lblDatos.Text = vecContacto[0];
 
 
         }
 
+
         private void btnSiguiente_Click(object sender, EventArgs e)
         {
+            //muestra el valor siguiente a la posicion actual del array
             indice++; // indice = indice + 1
-            lblDatos.Text = vecNombre[indice];
+            lblDatos.Text = vecContacto[indice];
 
-            if (vecNombre.Length <= (indice + 1))
+            //validamos no pasar el liite de dimencion del array
+            if (vecContacto.Length <= (indice + 1))
             {
                 btnSiguiente.Enabled = false;
             }
+            //validamos que en la siguiente posicion haya algo que mostrar
+            if (vecContacto[indice + 1] is not null)
+            {
+                btnSiguiente.Enabled = true;
+            }
+            else 
+            {
+                btnSiguiente.Enabled = false;
+            }
+
+            //habilitamos el btnAtras que se encuntra deshabilitado
+            btnAtras.Enabled = false;
         }
 
         private void btnAtras_Click(object sender, EventArgs e)
         {
             //muestra el valor anterior en la posicion actual del array
             indice--;
-            lblDatos.Text = vecNombre[indice];
+            lblDatos.Text = vecContacto[indice];
 
             //validacion si estamos en posicion 0, se deshabilita el btnAtras
-
-
-            if (vecNombre.Length <= (indice - 1))
+             if (vecContacto.Length <= (indice - 1))
             {
                 btnAtras.Enabled = false;
+            }
+
+             //Validacion para no pasar de la dimension del array
+             if (indice < 5)
+            {
+                btnAtras.Enabled = true;
             }
         }
     }
